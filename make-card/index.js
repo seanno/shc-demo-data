@@ -11,7 +11,7 @@ const MAX_SHC_LENGTH = 1195;
 // Load up the JSON
 
 const healthCardJson = {
-  "iss": "https://shcdemo.z5.web.core.windows.net",
+  "iss": "https://raw.githubusercontent.com/seanno/shc-demo-data/main",
   "nbf": Date.now() / 1000,
   "vc": {
 	"type": [

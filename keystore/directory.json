@@ -4,9 +4,9 @@
   "issuerInfo": [
 	{
 	  "issuer": {
-		"iss": "https://shcdemo.z5.web.core.windows.net",
+		"iss": "https://raw.githubusercontent.com/seanno/shc-demo-data/main",
 		"name": "SHC Demo Issuer",
-		"website": "https://shcdemo.z5.web.core.windows.net"
+		"website": "https://github.com/seanno/shc-demo-data"
 	  },
 	  "keys": [
 		{
