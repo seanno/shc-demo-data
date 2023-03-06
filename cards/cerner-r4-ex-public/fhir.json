@@ -1,0 +1,47 @@
+[
+  {
+	"fullUrl": "resource:0",
+	"resource": {
+	  "resourceType": "Coverage",
+	  "status": "active",
+	  "beneficiary": {
+		"reference": "resource:1"
+	  },
+	  "period": {
+		"start": "2021-01-18T14:30:20.000Z",
+		"end": "2021-01-18T14:30:21.000Z"
+	  },
+	  "payor": [
+		{
+		  "display": "Government"
+		}
+	  ],
+	  "class": [
+		{
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://hl7.org/fhir/ValueSet/coverage-class",
+				"code": "plan"
+			  }
+			]
+		  },
+		  "value": "2572940471",
+		  "name": "10-OPC, Class II"
+		}
+	  ]
+	}
+  },
+  {
+	"fullUrl": "resource:1",
+	"resource": {
+	  "resourceType": "Patient",
+      "name": [
+        {
+          "family": "CernerExample",
+          "given": [ "Public" ]
+        }
+      ]
+    }
+  }
+]

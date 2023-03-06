@@ -1,0 +1,88 @@
+[
+  {
+	"fullUrl": "resource:0",
+	"resource": {
+	  "resourceType": "Coverage",
+	  "status": "active",
+	  "subscriber": {
+		"reference": "resource:1"
+	  },
+	  "subscriberId": "123",
+	  "beneficiary": {
+		"reference": "resource:1"
+	  },
+	  "relationship": {
+		"coding": [
+		  {
+			"system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+			"code": "other"
+		  }
+		]
+	  },
+	  "period": {
+		"start": "2014-09-05T14:30:12.000Z",
+		"end": "2015-09-05T14:30:12.000Z"
+	  },
+	  "payor": [
+		{
+		  "reference": "resource:2"
+		}
+	  ],
+	  "class": [
+		{
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://hl7.org/fhir/ValueSet/coverage-class",
+				"code": "plan"
+			  }
+			]
+		  },
+		  "value": "729827",
+		  "name": "Aetna Missouri POS Open"
+		},
+		{
+		  "type": {
+			"coding": [
+			  {
+				"system": "http://hl7.org/fhir/ValueSet/coverage-class",
+				"code": "group"
+			  }
+			]
+		  },
+		  "value": "729839",
+		  "name": "Aetna Missouri POS Open group"
+		}
+	  ]
+	}
+  },
+  {
+	"fullUrl": "resource:1",
+	"resource": {
+	  "resourceType": "Patient",
+      "name": [
+        {
+          "family": "CernerExample",
+          "given": [ "Private" ]
+        }
+      ]
+	}
+  },
+  {
+	"fullUrl": "resource:2",
+	"resource": {
+	  "resourceType": "Organization",
+	  "name": "Example Payor",
+	  "type": [
+		{
+		  "coding": [
+			{
+			  "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+			  "code": "pay"
+			}
+		  ]
+		}
+	  ]
+	}
+  }
+]
