@@ -1,5 +1,5 @@
 {
-  "directory": "https://shcdemo.z5.web.core.windows.net/directory.json",
+  "directory": "https://raw.githubusercontent.com/seanno/shc-demo-data/main/keystore/directory.json",
   "time": "2023-03-04T00:00:00Z",
   "issuerInfo": [
 	{
