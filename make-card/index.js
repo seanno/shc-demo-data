@@ -14,6 +14,9 @@ const SHL_KEY = 'rxTgYlOaKJPFtcEd0qcceN8wEU4p94SqAwIWQe6uX7Q';
 const SHL_URL_PREFIX =
 	  'https://raw.githubusercontent.com/seanno/shc-demo-data/main/cards/';
 
+const SHL_VIEWER_PREFIX =
+	  'https://shctemp.z5.web.core.windows.net/shlink.html#';
+
 // Load up the JSON
 
 const cardName = process.argv[2];
@@ -90,7 +93,7 @@ function generateSHC(jws) {
   ];
   
   qrcode.toFile(cardDir + 'shc.png', segments, {
-	width: 400,
+	width: 600,
 	errorCorrectionLevel: 'L'
   });
 }
@@ -107,34 +110,29 @@ function generateSHL(jws) {
 	.final()
 	.then((encrypted) => {
 
-	  // then write the manifest
-	  const manifestJson = { files: [ {
-		"contentType": "application/smart-health-card",
-		"embedded": encrypted
-	  } ] };
-
-	  console.log('writing shl manifest to ' + cardDir + 'manifest.json');
-	  fs.writeFileSync(cardDir + 'manifest.json',
-					   JSON.stringify(manifestJson, null, 2));
+	  // then write the content
+	  console.log('writing shl content to ' + cardDir + 'vc.json');
+	  fs.writeFileSync(cardDir + 'vc.json', encrypted);
 
 	  // and the shl
 	  const shlJson = {
-		"url": SHL_URL_PREFIX + cardName + '/manifest.json',
-		"flag": "L",
+		"url": SHL_URL_PREFIX + cardName + '/vc.json',
+		"flag": "LU",
 		"key": SHL_KEY,
 		"label": 'Demo SHL for ' + cardName
 	  };
 
-	  const shl = 'shlink:/' + jose.util.base64url.encode(JSON.stringify(shlJson));
+	  const shlBare = 'shlink:/' + jose.util.base64url.encode(JSON.stringify(shlJson));
+	  const shlFinal = SHL_VIEWER_PREFIX + shlBare;
 
 	  console.log('writing shl to ' + cardDir + 'shl.txt');
-	  fs.writeFileSync(cardDir + 'shl.txt', shl);
+	  fs.writeFileSync(cardDir + 'shl.txt', shlFinal);
 
 	  // and the shl qr code
 	  console.log('writing shl qr to ' + cardDir + 'shl.png');
 	  
-	  qrcode.toFile(cardDir + 'shl.png', shl, {
-		width: 400,
+	  qrcode.toFile(cardDir + 'shl.png', shlFinal, {
+		width: 600,
 		errorCorrectionLevel: 'L'
 	  });
 	});
