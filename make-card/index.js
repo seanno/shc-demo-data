@@ -102,7 +102,7 @@ function generateSHC(jws) {
 function generateSHL(jws) {
 
   const cardJson = { "verifiableCredential": [ jws ] };
-  const cardArr = new TextEncoder().encode(cardJson);
+  const cardArr = new TextEncoder().encode(JSON.stringify(cardJson));
 
   // first encrypt the card
   jose.JWE.createEncrypt({ format: 'compact' }, { kty: 'oct', k: SHL_KEY })
