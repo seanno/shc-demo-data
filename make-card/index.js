@@ -111,12 +111,12 @@ function generateSHL(jws) {
 	.then((encrypted) => {
 
 	  // then write the content
-	  console.log('writing shl content to ' + cardDir + 'vc.json');
-	  fs.writeFileSync(cardDir + 'vc.json', encrypted);
+	  console.log('writing shl content to ' + cardDir + 'jws.txt');
+	  fs.writeFileSync(cardDir + 'jws.txt', encrypted);
 
 	  // and the shl
 	  const shlJson = {
-		"url": SHL_URL_PREFIX + cardName + '/vc.json',
+		"url": SHL_URL_PREFIX + cardName + '/jws.txt',
 		"flag": "LU",
 		"key": SHL_KEY,
 		"label": 'Demo SHL for ' + cardName
