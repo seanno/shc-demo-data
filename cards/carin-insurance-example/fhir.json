@@ -1,9 +1,8 @@
 [
   {
-    "fullUrl": "https://payor.example.org/Coverage/Example-Coverage1",
+    "fullUrl": "resource:0",
     "resource": {
       "resourceType": "Coverage",
-      "id": "Example-Coverage1",
       "meta": {
         "versionId": "1",
         "lastUpdated": "2021-04-06T10:49:02.473+00:00",
@@ -159,12 +158,12 @@
         "text": "health insurance plan policy"
       },
       "subscriber": {
-        "reference": "Patient/Example-Patient1",
+        "reference": "resource:1",
         "display": "John Doe"
       },
       "subscriberId": "102345672-01",
       "beneficiary": {
-        "reference": "Patient/Example-Patient2",
+        "reference": "resource:2",
         "display": "Jane Doe"
       },
       "dependent": "02",
@@ -183,7 +182,7 @@
       },
       "payor": [
         {
-          "reference": "Organization/Example-PayerOrganization1",
+          "reference": "resource:3",
           "display": "Acme Insurance Co"
         }
       ],
@@ -455,10 +454,9 @@
     }
   },
   {
-    "fullUrl": "https://payor.example.org/Organization/Example-PayorOrganization1",
+    "fullUrl": "resource:3",
     "resource": {
       "resourceType": "Organization",
-      "id": "Example-PayerOrganization1",
       "meta": {
         "versionId": "4",
         "lastUpdated": "2021-08-16T14:08:24.329+00:00",
@@ -595,10 +593,9 @@
     }
   },
   {
-    "fullUrl": "https://payor.example.org/Patient/Example-Patient1",
+    "fullUrl": "resource:1",
     "resource": {
       "resourceType": "Patient",
-      "id": "Example-Patient1",
       "meta": {
         "lastUpdated": "2020-07-07T13:26:22.0314215+00:00",
         "profile": [
@@ -656,10 +653,9 @@
     }
   },
   {
-    "fullUrl": "https://payor.example.org/Patient/Example-Patient2",
+    "fullUrl": "resource:2",
     "resource": {
       "resourceType": "Patient",
-      "id": "Example-Patient2",
       "meta": {
         "lastUpdated": "2020-07-07T13:26:22.0314215+00:00",
         "profile": [
