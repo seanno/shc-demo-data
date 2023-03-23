@@ -61,7 +61,10 @@ jose.JWK.asKeyStore(json5.parse(fs.readFileSync(KEYSTORE_PATH)))
   });
 
 function generateStuff(jws) {
-  console.log(`jws length: ${jws.length}`);
+
+  console.log(`writing unencrypted jws to jws-raw.txt (length: ${jws.length})`);
+  fs.writeFileSync(cardDir + 'jws-raw.txt', jws);
+  
   generateSHC(jws);
   generateSHL(jws);
 }
