@@ -10,13 +10,13 @@
       "y": "sHkouvnQLDv4U5Fnmc0_Kw3yRhjZg6VumbqUj1Zmcv4"
     },
 	{
-	  "kty": 'EC',
-	  "kid": 'ViOf-Tjl_GjJhYkOtWv9o7BcnVR1Bz4RNWfY34dAw_k',
+	  "kty": "EC",
+	  "kid": "ViOf-Tjl_GjJhYkOtWv9o7BcnVR1Bz4RNWfY34dAw_k",
 	  "use": "sig",
 	  "alg": "ES256",
-	  "crv": 'P-256',
-	  "x": '2Vuw69c_CvkMOipxMA0AspAnLDBeShocaz971cJJjUs',
-	  "y": 'DXZJgKCpItsULhvhn2uzSfwV-aaeNyTA4RJRMfd_OPQ',
+	  "crv": "P-256",
+	  "x": "2Vuw69c_CvkMOipxMA0AspAnLDBeShocaz971cJJjUs",
+	  "y": "DXZJgKCpItsULhvhn2uzSfwV-aaeNyTA4RJRMfd_OPQ",
 	  "crlVersion": 1
 	}
   ]
