@@ -17,7 +17,9 @@ const SHL_URL_PREFIX =
 const SHL_VIEWER_PREFIX =
 	  'https://shctemp.z5.web.core.windows.net/shlink.html#';
 
-// Load up the JSON
+const RID_FILENAME = "rid.txt";
+
+// load up the JSON
 
 const cardName = process.argv[2];
 const cardDir = '../cards/' + cardName + '/';
@@ -41,14 +43,29 @@ const healthCardJson = {
   }
 };
 
-const compressedCard = zlib.deflateRawSync(JSON.stringify(healthCardJson));
+// revocability
 
-// Sign the card
+let ikey = 0;
+
+if (fs.existsSync(cardDir + RID_FILENAME)) {
+  healthCardJson.vc.rid =
+	fs.readFileSync(cardDir + RID_FILENAME).toString().trim();
+  
+  ikey = 1;
+  console.log(`Creating revocable card; rid = ${healthCardJson.vc.rid}`);
+}
+else {
+  console.log('Creating unrevocable card');
+}
+
+// compress and sign the card
+
+const compressedCard = zlib.deflateRawSync(JSON.stringify(healthCardJson));
 
 jose.JWK.asKeyStore(json5.parse(fs.readFileSync(KEYSTORE_PATH)))
   .then((keystore) => {
 
-	const signingKey = keystore.all()[0];
+	const signingKey = keystore.all()[ikey];
 	const fields = { zip: 'DEF' };
 	
 	jose.JWS.createSign({ format: 'compact', fields }, signingKey)
