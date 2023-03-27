@@ -29,6 +29,14 @@
 		  "crlVersion": 1
 		}
 	  ],
+	  "crls": [
+		{
+		  "kid": "ViOf-Tjl_GjJhYkOtWv9o7BcnVR1Bz4RNWfY34dAw_k",
+		  "method": "rid",
+		  "ctr": 1,
+		  "rids": [ "imrevoked" ]
+		}
+	  ],
 	  "lastRetrieved": "2023-03-04T00:00:00Z"
 	}
   ]
