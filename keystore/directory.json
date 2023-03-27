@@ -38,6 +38,26 @@
 		}
 	  ],
 	  "lastRetrieved": "2023-03-04T00:00:00Z"
+	},
+	{
+	  "issuer": {
+		"iss": "https://raw.githubusercontent.com/damaguire/SHCKeys/main",
+		"name": "Kaiser - damaguire",
+		"website": "https://kp.org"
+	  },
+	  "keys": [
+		{
+		  "kty": "EC",
+		  "kid": "ImLFPq4c10DhhPny6jo5XFCMIbyF67ZxW-4fcD_NiRw",
+		  "use": "sig",
+		  "alg": "ES256",
+		  "x5c": [ ],
+		  "crv": "P-256",
+		  "x": "LLgYfzQRRkeQ4EG0CieRwlTYqT7Jbzk6CdJdSYf75ho",
+		  "y": "1rXhb_PGNaIo5Qx4hAS8ZaVQ9-kdY4UqWPR16kFEDC8"
+		}
+	  ],
+	  "lastRetrieved": "2023-03-04T00:00:00Z"
 	}
   ]
 }
