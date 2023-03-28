@@ -9,7 +9,7 @@ const KEYSTORE_PATH = '../keystore/keystore.json';
 const MAX_SHC_LENGTH = 1195;
 
 // we don't care about the security of demo data
-const SHL_KEY = 'rxTgYlOaKJPFtcEd0qcceN8wEU4p94SqAwIWQe6uX7Q';
+const SHL_KEY_B64 = 'rxTgYlOaKJPFtcEd0qcceN8wEU4p94SqAwIWQe6uX7Q';
 
 const SHL_URL_PREFIX =
 	  'https://raw.githubusercontent.com/seanno/shc-demo-data/main/cards/';
@@ -125,7 +125,14 @@ function generateSHL(jws) {
   const cardArr = new TextEncoder().encode(JSON.stringify(cardJson));
 
   // first encrypt the card
-  jose.JWE.createEncrypt({ format: 'compact' }, { kty: 'oct', k: SHL_KEY })
+  const key = {
+	kty: "oct",
+	k: SHL_KEY_B64,
+	alg: "A256GCM",
+	enc: "A256GCM"
+  };
+  
+  jose.JWE.createEncrypt({ format: 'compact' }, key)
 	.update(cardArr)
 	.final()
 	.then((encrypted) => {
@@ -138,7 +145,7 @@ function generateSHL(jws) {
 	  const shlJson = {
 		"url": SHL_URL_PREFIX + cardName + '/jws.txt',
 		"flag": "LU",
-		"key": SHL_KEY,
+		"key": SHL_KEY_B64,
 		"label": 'Demo SHL for ' + cardName
 	  };
 
