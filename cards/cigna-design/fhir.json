@@ -1,0 +1,449 @@
+[
+  {
+    "fullUrl": "resource:0",
+    "resource": {
+      "resourceType": "Coverage",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-04T17:11:12.806204Z",
+        "profile": [
+          "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Coverage"
+        ]
+      },
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-PlanBeneficiaries-extension",
+          "extension": [
+            {
+              "url": "memberId",
+              "valueString": "U48412318-01"
+            },
+            {
+              "url": "name",
+              "valueHumanName": {
+                "family": "Nuckolls",
+                "given": [
+                  "Brandon"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Logo-extension",
+          "extension": [
+            {
+              "url": "label",
+              "valueString": "Cigna HealthCare"
+            },
+            {
+              "url": "description",
+              "valueString": "Company logo"
+            },
+            {
+              "url": "image",
+              "valueAttachment": {
+                "contentType": "image/png",
+                "data": "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"
+              }
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-AdditionalCardInformation-extension",
+          "valueAnnotation": {
+            "text": "1-888-992-4462"
+          }
+        }
+      ],
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "MB",
+                "display": "Member Number"
+              }
+            ]
+          },
+          "system": "https://www.cigna.com/glossary/memberid",
+          "value": "U48412318-01",
+          "assigner": {
+            "display": "Cigna HealthCare"
+          }
+        }
+      ],
+      "status": "active",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code": "HIP",
+            "display": "health insurance plan policy"
+          }
+        ],
+        "text": "health insurance plan policy"
+      },
+      "subscriber": {
+        "reference": "resource:1",
+        "display": "Brandon Nuckolls"
+      },
+      "subscriberId": "U48412318 01",
+      "beneficiary": {
+        "reference": "resource:1",
+        "display": "Brandon Nuckolls"
+      },
+      "dependent": "01",
+      "relationship": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+            "code": "self",
+            "display": "Self"
+          }
+        ]
+      },
+      "period": {
+        "start": "2023-01-01"
+      },
+      "payor": [
+        {
+          "reference": "resource:2",
+          "display": "Cigna HealthCare"
+        }
+      ],
+      "class": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                "code": "group"
+              }
+            ]
+          },
+          "value": "0593438"
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                "code": "plan"
+              }
+            ]
+          },
+          "value": "PPO Choice 3200/6400"
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                "code": "rxbin"
+              }
+            ]
+          },
+          "value": "618138"
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                "code": "rxpcn"
+              }
+            ]
+          },
+          "value": "2385COMM"
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+                "code": "rxgroup"
+              }
+            ]
+          },
+          "value": "16953824"
+        }
+      ],
+      "costToBeneficiary": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                "code": "IndInDed",
+                "display": "Individual In Network Deductible"
+              }
+            ]
+          },
+          "valueMoney": {
+            "currency": "USD",
+            "value": 3200
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                "code": "IndOutDed",
+                "display": "Invidual Out of Network Deductible"
+              }
+            ]
+          },
+          "valueMoney": {
+            "currency": "USD",
+            "value": 6400
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                "code": "IndInMax",
+                "display": "Individual In Network Out of Pocket Maximum"
+              }
+            ]
+          },
+          "valueMoney": {
+            "currency": "USD",
+            "value": 6400
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                "code": "IndOutMax",
+                "display": "Individual Out of Network Out of Pocket Maximum"
+              }
+            ]
+          },
+          "valueMoney": {
+            "currency": "USD",
+            "value": 11000
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-copay-type",
+                "code": "gpvisit",
+                "display": "GP Office Visit Copay"
+              }
+            ]
+          },
+          "valueMoney": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension",
+                "valueString": "15%/25%"
+              }
+            ]
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-copay-type",
+                "code": "spvisit",
+                "display": "Specialist Office Visit Copay"
+              }
+            ]
+          },
+          "valueMoney": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension",
+                "valueString": "15%/25%"
+              }
+            ]
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/coverage-copay-type",
+                "code": "urgentcare",
+                "display": "Urgent Care"
+              }
+            ]
+          },
+          "valueMoney": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension",
+                "valueString": "15%"
+              }
+            ]
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://example.com/demoTerms",
+                "code": "coinsIn",
+                "display": "In-Network CoInsurance"
+              }
+            ]
+          },
+          "valueMoney": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension",
+                "valueString": "85%/15%"
+              }
+            ]
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://example.com/demoTerms",
+                "code": "coinsOut",
+                "display": "Out-of-Network CoInsurance"
+              }
+            ]
+          },
+          "valueMoney": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension",
+                "valueString": "55%/45%"
+              }
+            ]
+          }
+        },
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedCopayTypeCS",
+                "code": "rx"
+              }
+            ]
+          },
+          "valueMoney": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-BeneficiaryCostString-extension",
+                "valueString": "Yes"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "fullUrl": "resource:1",
+    "resource": {
+      "resourceType": "Patient",
+      "meta": {
+        "lastUpdated": "2023-04-04T17:11:12.804310Z",
+        "profile": [
+          "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Patient"
+        ]
+      },
+      "name": [
+        {
+          "family": "Nuckolls",
+          "given": [
+            "Brandon"
+          ]
+        }
+      ],
+      "birthDate": "1986-01-01",
+    }
+  },
+  {
+    "fullUrl": "resource:2",
+    "resource": {
+      "resourceType": "Organization",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2023-04-04T17:11:12.826710Z",
+        "profile": [
+          "http://hl7.org/fhir/us/insurance-card/StructureDefinition/C4DIC-Organization"
+        ]
+      },
+      "identifier": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICIdentifierType",
+                "code": "payerid"
+              }
+            ]
+          },
+          "value": "54001"
+        }
+      ],
+      "name": "Cigna HealthCare",
+      "contact": [
+        {
+          "purpose": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/insurance-card/CodeSystem/C4DICExtendedContactTypeCS",
+                "code": "provider",
+                "display": "Customer Service"
+              }
+            ]
+          },
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "1-888-992-4462"
+            }
+          ]
+        },
+        {
+          "purpose": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                "code": "PAYOR",
+                "display": "Send Claims to"
+              }
+            ]
+          },
+          "address": {
+            "type": "postal",
+            "text": "P.O. Box 182223 Chattanooga, TN 37422-7223",
+            "line": [
+              "P.O. Box 182223"
+            ],
+            "city": "Chattanooga",
+            "state": "TN",
+            "postalCode": "37422-7223",
+            "country": "US"
+          }
+        }
+      ],
+      "hip": {
+        "coding": [
+          {
+            "system": "",
+            "code": "Cigna HealthCare",
+            "display": "Cigna HealthCare"
+          }
+        ]
+      },
+      "active": true
+    }
+  }
+]
