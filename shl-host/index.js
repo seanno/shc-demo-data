@@ -1,4 +1,5 @@
 
+import cors from "cors";
 import path from "path";
 import http from "http";
 import https from "https";
@@ -33,7 +34,6 @@ const handleManifest = (req, res) => {
 	]
   };
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
   res.json(manifestJson);
 }
 
@@ -59,6 +59,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 app.use(express.json());
+app.use(cors());
 
 app.post("/manifest", handleManifest);
 
