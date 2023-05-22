@@ -20,7 +20,7 @@ const SHL_VIEWER_PREFIX =
 const RID_FILENAME = "rid.txt";
 
 // see ../shl-host
-const SHL_HOSTED_URL_PREFIX = 'http://localhost:3001/shl?card='; 
+const SHL_HOSTED_URL_PREFIX = 'https://localhost:3001/manifest?card='; 
 const SHL_HOSTED_URL_PASSCODE_SUFFIX = '&passcode=passcode';
 
 // load up the JSON
