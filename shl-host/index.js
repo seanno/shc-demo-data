@@ -1,4 +1,5 @@
 
+import path from "path";
 import http from "http";
 import https from "https";
 import fs from "fs";
@@ -43,7 +44,7 @@ const cardFile = (card, file) => {
 
   if (!card) return(false);
   
-  const shcPath = '../cards/' + sanitize(card) + '/' + file;
+  const shcPath = '..' + path.sep + 'cards' + path.sep + sanitize(card) + path.sep + file;
   if (!fs.existsSync(shcPath)) return(false);
 
   return(shcPath);
