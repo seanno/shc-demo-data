@@ -19,6 +19,10 @@ const SHL_VIEWER_PREFIX =
 
 const RID_FILENAME = "rid.txt";
 
+// see ../shl-host
+const SHL_HOSTED_URL_PREFIX = 'http://localhost:3001/shl?card='; 
+const SHL_HOSTED_URL_PASSCODE_SUFFIX = '&passcode=passcode';
+
 // load up the JSON
 
 const cardName = process.argv[2];
@@ -149,6 +153,9 @@ function generateSHL(jws) {
 		"label": 'Demo SHL for ' + cardName
 	  };
 
+	  console.log('writing shl JSON to ' + cardDir + 'shl.json');
+	  fs.writeFileSync(cardDir + 'shl.json', JSON.stringify(shlJson, null, 2));
+
 	  const shlBare = 'shlink:/' + jose.util.base64url.encode(JSON.stringify(shlJson));
 	  const shlFinal = SHL_VIEWER_PREFIX + shlBare;
 
@@ -162,6 +169,48 @@ function generateSHL(jws) {
 		width: 600,
 		errorCorrectionLevel: 'L'
 	  });
+
+	  // an expired version
+	  shlJson.exp = 1;
+	  
+	  const shlExpired = SHL_VIEWER_PREFIX +
+			'shlink:/' + jose.util.base64url.encode(JSON.stringify(shlJson));
+
+	  console.log('writing expired shl to ' + cardDir + 'shl-expired.txt');
+	  fs.writeFileSync(cardDir + 'shl-expired.txt', shlExpired);
+
+	  console.log('writing expired shl qr to ' + cardDir + 'shl-expired.png');
+	  qrcode.toFile(cardDir + 'shl-expired.png', shlExpired,
+					{ width: 600, errorCorrectionLevel: 'L' });
+
+	  delete shlJson["exp"];
+	  
+	  // and the same for hosted versions (see ../shl-host)
+	  shlJson.url = SHL_HOSTED_URL_PREFIX + cardName;
+	  shlJson.flag = 'L';
+
+	  const shlHosted = SHL_VIEWER_PREFIX +
+			'shlink:/' + jose.util.base64url.encode(JSON.stringify(shlJson));
+
+	  console.log('writing hosted shl to ' + cardDir + 'shl-hosted.txt');
+	  fs.writeFileSync(cardDir + 'shl-hosted.txt', shlHosted);
+
+	  console.log('writing hosted shl qr to ' + cardDir + 'shl-hosted.png');
+	  qrcode.toFile(cardDir + 'shl-hosted.png', shlHosted,
+					{ width: 600, errorCorrectionLevel: 'L' });
+
+	  shlJson.url += SHL_HOSTED_URL_PASSCODE_SUFFIX;
+	  shlJson.flag += "P";
+
+	  const shlHostedPass = SHL_VIEWER_PREFIX +
+			'shlink:/' + jose.util.base64url.encode(JSON.stringify(shlJson));
+
+	  console.log('writing hosted passcode shl to ' + cardDir + 'shl-hosted-pass.txt');
+	  fs.writeFileSync(cardDir + 'shl-hosted-pass.txt', shlHostedPass);
+		
+	  console.log('writing hosted shl pass qr to ' + cardDir + 'shl-hosted-pass.png');
+	  qrcode.toFile(cardDir + 'shl-hosted-pass.png', shlHostedPass,
+					{ width: 600, errorCorrectionLevel: 'L' });
 	});
 }
 
