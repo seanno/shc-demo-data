@@ -65,6 +65,8 @@ const port = process.env.PORT || 3001;
 
 if (process.env.HTTPS) {
 
+  app.get("/trustme", (req, res) => { res.send("yay"); });
+  
   const options = {
 	"key": fs.readFileSync('key.pem'),
 	"cert": fs.readFileSync('cert.pem')
