@@ -1,0 +1,16 @@
+{
+  "name": "ips",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "json5": "^2.2.3",
+    "node-jose": "^2.2.0",
+    "qrcode": "^1.5.3"
+  }
+}
