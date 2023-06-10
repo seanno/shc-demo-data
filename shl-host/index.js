@@ -53,11 +53,6 @@ const handleMultiManifest = (req, res) => {
 	return;
   }
 
-  const payloadPath = cardFile(req.query.card, 'shl.json');
-  if (!payloadPath) { res.status(500).end(); return; }
-  
-  const payloadJson = JSON.parse(fs.readFileSync(payloadPath));
-
   const manifestJson = {
 	"files": [
 	  {
