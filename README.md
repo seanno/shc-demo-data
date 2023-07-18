@@ -1,9 +1,9 @@
 
 ## TLDR
 
-* Insurance SHLs are in the subdirectories of [cards](cards). Use the "shl.txt" files. Trust the issuer either by [ISS URL](https://raw.githubusercontent.com/seanno/shc-demo-data/main) or using the demo data [directory](https://raw.githubusercontent.com/seanno/shc-demo-data/main/keystore/directory.json).
+* Insurance SHLs are in the subdirectories of [cards](cards). Use the "shl.txt" or "shl.png" files. Trust the issuer either by [ISS URL](https://raw.githubusercontent.com/seanno/shc-demo-data/main) or using the demo data [directory](https://raw.githubusercontent.com/seanno/shc-demo-data/main/keystore/directory.json).
 
-* IPS SHLs are the *-shl.txt files in the [ips](ips) directory.
+* IPS SHLs are the *-shl.txt and *-shl.png files in the [ips](ips) directory.
 
 * More complicated test scenarios described below.
 
