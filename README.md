@@ -7,6 +7,11 @@
 
 * More complicated test scenarios described below.
 
+* Lots more content and sample code on my blog here:
+  * [SMART does it again with Health Cards and Links](https://shutdownhook.com/2023/05/30/smart-does-it-again-with-health-cards-and-links/)
+  * [Nerdsplaining: SMART Health Cards](https://shutdownhook.com/2023/06/05/nerdsplaining-smart-health-cards/)
+  * [Nerdsplaining: SMART Health Links](https://shutdownhook.com/2023/06/22/nerdsplaining-smart-health-links/)
+
 ## Overview
 
 A (pretty much ad-hoc) collection of FHIR data and SMART Health Cards and Links
