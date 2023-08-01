@@ -66,6 +66,10 @@ const handleMultiManifest = (req, res) => {
 	  {
 		"contentType": "application/fhir+json",
 		"location": GITHUB_URL_PREFIX + "multi-shl/ips1.enc"
+	  },
+	  {
+		"contentType": "application/smart-health-card",
+		"location": GITHUB_URL_PREFIX + "misc/example-00-d-jws.txt"
 	  }
 	]
   };
