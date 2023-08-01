@@ -69,7 +69,7 @@ const handleMultiManifest = (req, res) => {
 	  },
 	  {
 		"contentType": "application/smart-health-card",
-		"location": GITHUB_URL_PREFIX + "misc/example-00-d-jws.txt"
+		"location": GITHUB_URL_PREFIX + "example-covid/jws.txt"
 	  }
 	]
   };
