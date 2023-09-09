@@ -12,7 +12,7 @@ const SHL_URL_PREFIX =
 	  'https://raw.githubusercontent.com/seanno/shc-demo-data/main/ips/';
 
 const SHL_VIEWER_PREFIX =
-	  'https://shctemp.z5.web.core.windows.net/shlink.html#';
+	  'https://viewer.tcpdev.org/shlink.html#';
 
 // load up the JSON and encrypt it
 
