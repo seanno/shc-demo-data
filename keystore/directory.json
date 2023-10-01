@@ -124,6 +124,25 @@
 		}		
 	  ],
 	  "lastRetrieved": "2023-03-04T00:00:00Z"
+	},
+	{
+	  "issuer": {
+		"iss": "https://examples.smqr.io",
+		"name": "SMQR Issuer",
+		"website": "https://examples-ui.smqr.io/"
+	  },
+	  "keys": [
+		{
+		  "kty": "EC",
+		  "kid": "IhMloBUYX7nV1B6fztgoTo1k0lgGpy7ZWxTXrlzJwMw",
+		  "use": "sig",
+		  "alg": "ES256",
+		  "crv": "P-256",
+		  "x": "FLgiWGMjrVvyIvYSiTivWTy96p7dKiXtvjkuPiMTjIw",
+		  "y": "l3vzKpQB6K7Tej5kxIfuHo4nsIENLuTtCXlG47f3Qys"
+		}
+	  ],
+	  "lastRetrieved": "2023-09-30T00:00:00Z"
 	}
   ]
 }
