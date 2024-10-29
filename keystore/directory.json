@@ -143,6 +143,26 @@
 		}
 	  ],
 	  "lastRetrieved": "2023-09-30T00:00:00Z"
+	},
+	{
+	  "issuer": {
+		"iss": "https://dtb.healthcanada.ca/temporary/issuer",
+		"name": "PDIR Demo Key",
+		"website": "https://www.canada.ca/en/health-canada.html"
+	  },
+	  "keys": [
+		{
+		  "kty": "EC",
+		  "kid": "1i8Zaag0OAuSxxcz3nCZwIDB6B22Sy9x5ZHMQQd1Mok",
+		  "use": "sig",
+		  "alg": "ES256",
+		  "crv": "P-256",
+		  "x": "BTZLb-EYXgk4eTes36csTE859g9hT9Dl16GpGQOg-_w",
+		  "y": "2d7HRo8pKwUu_KGHx_uLFY5XUhz3uy4WvzP0A2XUZGI",
+		  "date": 1724714527889
+		}
+	  ],
+	  "lastRetrieved": "2024-10-29T00:00:00Z"
 	}
   ]
 }
